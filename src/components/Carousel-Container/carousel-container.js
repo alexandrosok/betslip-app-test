@@ -36,6 +36,7 @@ export default class CarouselContainer extends React.Component {
                     this.setState({
                         events: response.liveEvents,
                     })
+
                 })
         } else {
             console.log('getting from cache')
@@ -62,6 +63,9 @@ export default class CarouselContainer extends React.Component {
     }
 
     render() {
+        let CarouselContent = null
+        this.eventResult = this.state.events ? this.state.events : Helper.getCache(this.cache)
+
         this.eventResult = this.state.events.map((item, index) => (
             <div key={index}>
                 <div className="score-container">
@@ -80,19 +84,28 @@ export default class CarouselContainer extends React.Component {
             </div>
         ))
 
-        const Gallery = () => (
-            <AliceCarousel
-                dotsDisabled={true}
-                buttonsDisabled={true}
-                autoPlayInterval={3000}
-                autoPlay={true}>
-                {this.eventResult}
-            </AliceCarousel>
-        )
+        if (this.eventResult) {
+            CarouselContent = () => (
+                <AliceCarousel
+                    dotsDisabled={true}
+                    buttonsDisabled={true}
+                    autoPlayInterval={3000}
+                    autoPlay={true}>
+                    {this.eventResult}
+                </AliceCarousel>
+            )
+        } else {
+            CarouselContent = () => {
+                <div>
+                    No Data availiable
+                </div>
+            }
+        }
+
 
         return (
             <div className="carousel-container">
-                <Gallery/>
+                <CarouselContent/>
             </div>
         )
     }

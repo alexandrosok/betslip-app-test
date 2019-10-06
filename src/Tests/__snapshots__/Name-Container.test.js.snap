@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameContainer should render correctly 1`] = `
+<div
+  className="name-container"
+>
+  <div
+    className="icon-container"
+  >
+    <img
+      alt=""
+      src=""
+    />
+  </div>
+  <div
+    className="game-name"
+  />
+</div>
+`;

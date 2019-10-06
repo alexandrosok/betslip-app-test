@@ -1,0 +1,14 @@
+.game-name {
+    color: white;
+}
+.name-container{
+    display:inline-flex;
+    font-size: 18px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.icon-container{
+    margin-top:3px;
+    margin-right:5px;
+}

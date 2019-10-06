@@ -1,0 +1,17 @@
+.bet-button-container {
+    margin-top: 20px;
+}
+
+.place-bet-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    text-decoration: none;
+    background: #3AAA35;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+
+}

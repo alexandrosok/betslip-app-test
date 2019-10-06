@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonContainer should render correctly 1`] = `
+<div
+  className="bet-button-container"
+>
+  <a
+    className="place-bet-button"
+    href="#"
+    onClick={[Function]}
+  >
+    <span>
+      Place A Bet
+    </span>
+  </a>
+</div>
+`;

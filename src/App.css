@@ -11,6 +11,13 @@ body {
   background-color: #2e7423;
   text-align: center;
 }
+
+.result-container
+{
+  float:left;
+  width: 70%;
+}
+
 header {
   width: 900px;
   text-align: left;
